@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Online Donation Form</title>
+            <style>
+                body {
+                    margin: 0;
+                    font-family: Trebuchet MS;
+                    color: #828282;
+                }
+                
+                /*Start of Drop Down Menu*/
+                
+                .dropbtn {
+                    background-color: black;
+                    color: white;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                    width: 200px;
+                }
+                
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+                
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    background-color: black;
+                    min-width: 200px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                }
+                
+                .dropdown-content a {
+                    color: white;
+                    padding: 7px 7px;
+                    text-decoration: none;
+                    display: block;
+                }
+                
+                .dropdown-content a:hover {
+                    background-color: gray;
+                }
+                
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+                
+                .dropdown:hover .dropbtn {
+                    background-color: black;
+                }
+                
+                /*End of Drop Down Menu*/
+                
+                h1 {
+                    text-align: center;
+                }
+                 
+                .container {
+                    margin: 1% 30% 0% 12%;
+                    display: block;
+                    text-align: center;
+                    padding: 1rem;
+                    position: relative;
+                    border: solid 3px;
+                    background: linear-gradient(to right, #ffffff, #ffc2f0);
+                    padding: 3px;
+                }
+                
+                .myform label {
+                    text-align: left;
+                    display: block;
+                }
+                
+                .myform input[type="text"],
+                .myform input[type="email"],
+                .myform input[type="tel"],
+                .myform textarea {
+                    float: right;
+                    width: 60%;
+                    border: 1px solid #ccc;
+                    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                    font-size: 0.9em;
+                    padding: 0.3em; 
+                }
+                
+                .myform textarea {
+                    height: 100px;
+                }
+                
+                p {
+                    padding: 10px;
+                }
+                
+                .mytable {
+                    width: 100%;
+                }
+                
+                .mytable th {
+                    vertical-align: top;
+                    text-align: left;
+                    
+                }
+                
+                .mytable td {
+                    padding-bottom: 10px;
+                }
+                
+            </style>
+            </head>
+            <body>
+                <div class="dropdown" style="float:right;">
+                    <button class="dropbtn">Forms</button>
+                    <div class="dropdown-content">
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\application.html">Application</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\banking.html">Banking</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\contact.html">Contact</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\donation.html">Donation</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\feedback.html">Feedback</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\forgot-password.html">Forgot Password</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\login.html">Log in</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\medical.html">Medical</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\order.html">Order</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\payment.html">Payment</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\registration.html">Registration</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\signup.html">Sign Up</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\subscribe.html">Subscription</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\support.html">Support</a>
+                        <a href="C:\Users\aruna\Workspace\CRAMPETE\forms\volunteer.html">Volunteer</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <form class="myform" action="/form/submit" method="post">
+                        <h1>Online Donation Form</h1>
+                        <hr><br>
+                        <p>
+                            <label>First Name
+                                <input type="text" name="firstname" placeholder="First Name" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>Last Name
+                                <input type="text" name="lastname" placeholder="Last Name" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>E-mail Address
+                                <input type="email" name="email" placeholder="email@example.com" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>Phone Number
+                                <input type="tel" name="tel" placeholder="000-000 0000" required>
+                            </label>
+                        </p>
+                        <br>
+                        <table class="mytable">
+                            <tr>
+                                <th rowspan="3" width="38%">Type of Donation</th>
+                                <td width="62%">
+                                    <label><input type="radio" name="donate-type" value="Love Offering" required>
+                                    Love Offering</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label><input type="radio" name="donate-type" value="Buiding Expansion">
+                                    Buiding Expansion</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label><input type="radio" name="donate-type" value="One Time Donation">
+                                    One Time Donation</label>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>
+                            <label>Donation Amount
+                                <input type="text" name="amount" placeholder="USD" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label>Comments
+                                <textarea name="comments" maxlength="500" placeholder="Wanna say something.."></textarea>
+                            </label>
+                        </p>
+                        <br><br><br><br><br>
+                        <p>
+                            <input type="image" name="paypal" src="https://arunaskitchen.my/aruna/img/paypal-checkout.png" alt="Donate">
+                        </p>
+                    </form>
+                </div>
+               
+            </body>
+    </html> 
+
